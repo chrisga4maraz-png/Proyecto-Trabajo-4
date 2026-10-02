@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria | Panadería & Café</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <div class="logo-icon">P</div>
+
+        <div class="logo-text">
+            <strong>Victoria</strong>
+            <span>Panadería & Café</span>
+        </div>
+    </div>
+
+    <div class="mesa">
+        <span>MESA</span>
+        <strong>08</strong>
+    </div>
+
+    <a href="{{ url_for('carrito') }}" class="carrito">
+        <span class="Pedido">🥖</span>
+        <span class="pedido-contador" id="contador-pedido">0</span>
+    </a>
+
+</header>
+
+
+<main>
+
+    <section class="bienvenida">
+
+        <div class="bienvenida-contenido">
+
+            <span class="etiqueta">HECHO PARA DISFRUTAR</span>
+
+            <p class="saludo">Bienvenido a Victoria</p>
+
+            <h1>
+                Algo rico
+                <span>te espera.</span>
+            </h1>
+
+            <p class="descripcion">
+                Elegí lo que más te guste, armá tu pedido y disfrutalo
+                en nuestra mesa.
+            </p>
+
+            <a href="{{ url_for('productos') }}" class="btn-principal">
+                Ver menú
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="bienvenida-imagen">
+
+            <img
+                src="{{ url_for('static', filename='img/cafe.jpg') }}"
+                alt="Café de Victoria"
+            >
+
+            <div class="imagen-detalle"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="categorias">
+
+        <div class="titulo-seccion">
+
+            <span>EXPLORÁ</span>
+
+            <h2>¿Qué tenés ganas de comer?</h2>
+
+        </div>
+
+
+        <div class="categorias-grid">
+
+            <a
+                href="{{ url_for('productos') }}#cafeteria"
+                class="categoria categoria-naranja"
+            >
+                <div class="categoria-icono">☕</div>
+
+                <div>
+                    <strong>Cafetería</strong>
+                    <span>Cafés y bebidas calientes</span>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <a
+                href="{{ url_for('productos') }}#panaderia"
+                class="categoria categoria-negra"
+            >
+                <div class="categoria-icono">🥐</div>
+
+                <div>
+                    <strong>Panadería</strong>
+                    <span>Recién horneado</span>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <a
+                href="{{ url_for('productos') }}#pasteleria"
+                class="categoria categoria-crema"
+            >
+                <div class="categoria-icono">🍰</div>
+
+                <div>
+                    <strong>Pastelería</strong>
+                    <span>Algo dulce</span>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <a
+                href="{{ url_for('productos') }}#salados"
+                class="categoria categoria-naranja"
+            >
+                <div class="categoria-icono">🥪</div>
+
+                <div>
+                    <strong>Salados</strong>
+                    <span>Para cortar el hambre</span>
+                </div>
+
+                <b>→</b>
+            </a>
+
+
+            <a
+                href="{{ url_for('productos') }}#bebidas"
+                class="categoria categoria-negra"
+            >
+                <div class="categoria-icono">🥤</div>
+
+                <div>
+                    <strong>Bebidas</strong>
+                    <span>Frías y refrescantes</span>
+                </div>
+
+                <b>→</b>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="destacados">
+
+        <div class="titulo-seccion destacados-titulo">
+
+            <div>
+                <span>PARA EMPEZAR</span>
+                <h2>Los favoritos de la casa</h2>
+            </div>
+
+            <a
+                href="{{ url_for('productos') }}"
+                class="ver-todos"
+            >
+                Ver todo →
+            </a>
+
+        </div>
+
+
+        <div class="productos-grid">
+
+
+            <article class="producto">
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="{{ url_for('static', filename='img/cafe.jpg') }}"
+                        alt="Café"
+                    >
+
+                    <span class="producto-tag">
+                        Favorito
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        CAFETERÍA
+                    </span>
+
+                    <h3>Café</h3>
+
+
+                    <div class="producto-footer">
+
+                        <strong>$2.500</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Café"
+                            data-precio="2500"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="producto">
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="{{ url_for('static', filename='img/medialuna.jpg') }}"
+                        alt="Medialunas"
+                    >
+
+                    <span class="producto-tag">
+                        Clásico
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PANADERÍA
+                    </span>
+
+                    <h3>Medialunas</h3>
+
+
+                    <div class="producto-footer">
+
+                        <strong>$1.800</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Medialunas"
+                            data-precio="1800"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="producto">
+
+                <div class="producto-imagen">
+
+                    <img
+                        src="{{ url_for('static', filename='img/torta.jpg') }}"
+                        alt="Porción de torta"
+                    >
+
+                    <span class="producto-tag">
+                        Dulce
+                    </span>
+
+                </div>
+
+
+                <div class="producto-info">
+
+                    <span class="producto-categoria">
+                        PASTELERÍA
+                    </span>
+
+                    <h3>Porción de torta</h3>
+
+
+                    <div class="producto-footer">
+
+                        <strong>$3.200</strong>
+
+                        <button
+                            class="btn-agregar"
+                            data-producto="Porción de torta"
+                            data-precio="3200"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="experiencia">
+
+        <div class="experiencia-contenido">
+
+            <span class="experiencia-etiqueta">
+                ASÍ DE SIMPLE
+            </span>
+
+            <h2>
+                Pedí.
+                <span>Disfrutá.</span>
+            </h2>
+
+            <p>
+                Sin esperar al mozo. Escaneá el QR de tu mesa,
+                elegí tus productos y enviá el pedido.
+            </p>
+
+        </div>
+
+
+        <div class="pasos">
+
+            <div class="paso">
+
+                <span>01</span>
+
+                <div>
+                    <strong>Elegí</strong>
+                    <p>Recorré nuestro menú.</p>
+                </div>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>02</span>
+
+                <div>
+                    <strong>Armá tu pedido</strong>
+                    <p>Agregá todo lo que quieras.</p>
+                </div>
+
+            </div>
+
+
+            <div class="paso">
+
+                <span>03</span>
+
+                <div>
+                    <strong>Confirmá</strong>
+                    <p>Nosotros nos encargamos del resto.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div class="pedido-flotante">
+
+    <a
+        href="{{ url_for('carrito') }}"
+        class="pedido-boton"
+    >
+
+        <span class="pedido-circulo">
+            🛒
+        </span>
+
+        <span class="pedido-texto">
+            <small>MI PEDIDO</small>
+            <strong>Ver pedido</strong>
+        </span>
+
+        <span
+            class="pedido-total"
+            id="pedido-total"
+        >
+            $0
+        </span>
+
+        <span
+            class="pedido-contador"
+            id="pedido-contador"
+        >
+            0
+        </span>
+
+    </a>
+
+    <span class="pedido-decoracion pedido-decoracion-1"></span>
+    <span class="pedido-decoracion pedido-decoracion-2"></span>
+    <span class="pedido-decoracion pedido-decoracion-3"></span>
+
+</div>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <strong>Victoria</strong>
+
+        <span>Panadería & Café</span>
+
+    </div>
+
+
+    <div class="footer-info">
+
+        <span>Mesa 08</span>
+        <span>•</span>
+        <span>San Pedro de Jujuy</span>
+
+    </div>
+
+
+    <p>
+        Un buen momento empieza con algo rico.
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
