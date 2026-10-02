@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria | Mi Pedido</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="logo-icon">P</div>
+
+        <div class="logo-text">
+            <strong>Victoria</strong>
+            <span>Panadería & Café</span>
+        </div>
+
+    </div>
+
+
+    <div class="mesa">
+
+        <span>MESA</span>
+        <strong>08</strong>
+
+    </div>
+
+
+    <a href="{{ url_for('productos') }}" class="carrito">
+
+        <span class="carrito-icono">+</span>
+
+        <span class="carrito-contador" id="contador-carrito">
+            0
+        </span>
+
+    </a>
+
+</header>
+
+
+<main class="carrito-pagina">
+
+
+    <section class="carrito-encabezado">
+
+        <span class="etiqueta">
+            MESA 08
+        </span>
+
+        <p class="saludo">
+            Victoria
+        </p>
+
+        <h1>
+            Mi <span>pedido.</span>
+        </h1>
+
+        <p class="descripcion">
+            Revisá lo que elegiste antes de enviarlo a nuestra cocina.
+        </p>
+
+    </section>
+
+
+    <section class="carrito-contenido">
+
+
+        <div class="carrito-lista">
+
+            <div class="carrito-lista-titulo">
+
+                <div>
+                    <span>PEDIDO</span>
+                    <h2>Lo que elegiste</h2>
+                </div>
+
+                <a
+                    href="{{ url_for('productos') }}"
+                    class="seguir-comprando"
+                >
+                    + Agregar más
+                </a>
+
+            </div>
+
+
+            <div
+                class="carrito-productos"
+                id="carrito-productos"
+            >
+
+                <!-- Los productos se cargan desde app.js -->
+
+            </div>
+
+
+            <div
+                class="carrito-vacio"
+                id="carrito-vacio"
+            >
+
+                <div class="carrito-vacio-icono">
+                    🛒
+                </div>
+
+                <h3>Tu pedido está vacío</h3>
+
+                <p>
+                    Todavía no agregaste ningún producto.
+                </p>
+
+                <a
+                    href="{{ url_for('productos') }}"
+                    class="btn-principal"
+                >
+                    Ver menú
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <aside class="resumen-pedido">
+
+
+            <div class="resumen-titulo">
+
+                <span>RESUMEN</span>
+
+                <h2>Mi pedido</h2>
+
+            </div>
+
+
+            <div class="resumen-mesa">
+
+                <span>Mesa</span>
+
+                <strong>08</strong>
+
+            </div>
+
+
+            <div class="resumen-linea">
+
+                <span>Productos</span>
+
+                <strong id="resumen-cantidad">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="resumen-linea">
+
+                <span>Subtotal</span>
+
+                <strong id="resumen-subtotal">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <div class="resumen-separador"></div>
+
+
+            <div class="resumen-total">
+
+                <span>Total</span>
+
+                <strong id="resumen-total">
+                    $0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="btn-confirmar"
+                id="btn-confirmar"
+            >
+                Confirmar pedido
+                <span>→</span>
+            </button>
+
+
+            <button
+                class="btn-vaciar"
+                id="btn-vaciar"
+            >
+                Vaciar pedido
+            </button>
+
+
+            <p class="resumen-nota">
+                Tu pedido será preparado especialmente
+                para la mesa 08.
+            </p>
+
+        </aside>
+
+    </section>
+
+
+    <section
+        class="pedido-confirmado"
+        id="pedido-confirmado"
+    >
+
+        <div class="confirmado-icono">
+            ✓
+        </div>
+
+        <span>PEDIDO RECIBIDO</span>
+
+        <h2>
+            ¡Listo!
+        </h2>
+
+        <p>
+            Tu pedido fue registrado correctamente.
+            En breve comenzaremos a prepararlo.
+        </p>
+
+        <strong>
+            Mesa 08
+        </strong>
+
+        <a
+            href="{{ url_for('productos') }}"
+            class="btn-principal"
+        >
+            Volver al menú
+            <span>→</span>
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+
+        <strong>Victoria</strong>
+
+        <span>
+            Panadería & Café
+        </span>
+
+    </div>
+
+
+    <div class="footer-info">
+
+        <span>Mesa 08</span>
+
+        <span>•</span>
+
+        <span>
+            San Pedro de Jujuy
+        </span>
+
+    </div>
+
+
+    <p>
+        Un buen momento empieza con algo rico.
+    </p>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Victoria | Menú</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="encabezado">
+
+    <div class="logo">
+        <span>VICTORIA</span>
+        <strong>Panadería & Café</strong>
+    </div>
+
+    <div class="display-superior">
+        <span>MENÚ DIGITAL</span>
+        <strong>Elegí tu producto</strong>
+    </div>
+
+    <div class="mesa">
+        <span>MESA</span>
+        <strong>08</strong>
+    </div>
+
+</header>
+
+
+<nav class="categorias">
+
+    <a href="#cafeteria">Cafetería</a>
+    <a href="#panaderia">Panadería</a>
+    <a href="#pasteleria">Pastelería</a>
+    <a href="#salados">Salados</a>
+    <a href="#bebidas">Bebidas</a>
+
+</nav>
+
+
+<section class="ofertas">
+
+    <div class="ofertas-titulo">
+        <span>DESTACADOS</span>
+        <h2>Ofertas de la casa</h2>
+    </div>
+
+
+    <div class="carrusel">
+
+        <button class="flecha izquierda" onclick="anteriorOferta()">‹</button>
+
+
+        <div class="ofertas-contenedor">
+
+
+            <article
+                class="oferta activa"
+                data-producto="Desayuno Victoria"
+                data-precio="4900"
+            >
+
+                <span class="etiqueta">COMBO</span>
+
+                <h3>Desayuno Victoria</h3>
+
+                <p>
+                    Café con leche + 2 medialunas de manteca.
+                </p>
+
+                <strong>$4.900</strong>
+
+                <button class="btn-agregar-combo">
+                    + Agregar
+                </button>
+
+            </article>
+
+
+            <article
+                class="oferta"
+                data-producto="Combo Merienda"
+                data-precio="6800"
+            >
+
+                <span class="etiqueta">ESPECIAL</span>
+
+                <h3>Combo Merienda</h3>
+
+                <p>
+                    Capuchino + brownie artesanal.
+                </p>
+
+                <strong>$6.800</strong>
+
+                <button class="btn-agregar-combo">
+                    + Agregar
+                </button>
+
+            </article>
+
+
+            <article
+                class="oferta"
+                data-producto="Combo Salado"
+                data-precio="9200"
+            >
+
+                <span class="etiqueta">FAVORITO</span>
+
+                <h3>Combo Salado</h3>
+
+                <p>
+                    Tostado especial + papas fritas + gaseosa.
+                </p>
+
+                <strong>$9.200</strong>
+
+                <button class="btn-agregar-combo">
+                    + Agregar
+                </button>
+
+            </article>
+
+        </div>
+
+
+        <button class="flecha derecha" onclick="siguienteOferta()">›</button>
+
+    </div>
+
+
+    <div class="puntos">
+
+        <span class="punto activo"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+
+    </div>
+
+</section>
+
+
+<main class="catalogo">
+
+    <div class="catalogo-titulo">
+
+        <span>CATÁLOGO</span>
+
+        <h2>Elegí lo que quieras disfrutar</h2>
+
+    </div>
+
+
+    <div class="catalogo-layout">
+
+
+        <div class="catalogo-productos">
+
+
+            <!-- CAFETERÍA -->
+
+            <section class="categoria" id="cafeteria">
+
+                <div class="categoria-titulo">
+                    <span>01</span>
+                    <h3>Cafetería</h3>
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Espresso"
+                            data-precio="2200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Espresso</strong>
+
+                                <small>
+                                    Café intenso y aromático
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Espresso preparado con granos seleccionados
+                                y una extracción equilibrada.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Granos seleccionados</span>
+                                <span>Tostado medio</span>
+                                <span>Cuerpo intenso</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Espresso doble"
+                            data-precio="2800"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Espresso doble</strong>
+
+                                <small>
+                                    Doble intensidad y cuerpo
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.800</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Doble extracción para quienes buscan
+                                un café más intenso.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Doble extracción</span>
+                                <span>Alta intensidad</span>
+                                <span>Cuerpo profundo</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Café con leche"
+                            data-precio="3200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Café con leche</strong>
+
+                                <small>
+                                    Espresso, leche y espuma
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Espresso combinado con leche caliente
+                                y una suave capa de espuma.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Leche cremosa</span>
+                                <span>Espuma suave</span>
+                                <span>Equilibrado</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Leche vegetal"
+                                    >
+                                    Leche vegetal
+                                    <b>+$700</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="500"
+                                        data-extra="Extra café"
+                                    >
+                                    Extra café
+                                    <b>+$500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="300"
+                                        data-extra="Extra espuma"
+                                    >
+                                    Extra espuma
+                                    <b>+$300</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Capuchino"
+                            data-precio="3600"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Capuchino</strong>
+
+                                <small>
+                                    Café, leche y espuma cremosa
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.600</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Capuchino cremoso con espresso,
+                                leche vaporizada y espuma.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Espuma cremosa</span>
+                                <span>Leche vaporizada</span>
+                                <span>Espresso intenso</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Leche vegetal"
+                                    >
+                                    Leche vegetal
+                                    <b>+$700</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="600"
+                                        data-extra="Extra chocolate"
+                                    >
+                                    Extra chocolate
+                                    <b>+$600</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Latte"
+                            data-precio="3700"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Latte</strong>
+
+                                <small>
+                                    Suave, cremoso y equilibrado
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.700</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Café suave con abundante leche
+                                vaporizada y fina espuma.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Suave</span>
+                                <span>Cremoso</span>
+                                <span>Leche vaporizada</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Submarino"
+                            data-precio="3900"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Submarino</strong>
+
+                                <small>
+                                    Chocolate caliente con leche
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.900</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Leche caliente acompañada con
+                                una barra de chocolate.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Chocolate</span>
+                                <span>Leche caliente</span>
+                                <span>Cremoso</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PANADERÍA -->
+
+            <section class="categoria" id="panaderia">
+
+                <div class="categoria-titulo">
+                    <span>02</span>
+                    <h3>Panadería</h3>
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Medialuna de manteca"
+                            data-precio="1200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Medialuna de manteca</strong>
+
+                                <small>
+                                    Clásica y dorada
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$1.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Medialuna artesanal dorada por fuera
+                                y tierna por dentro.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Manteca</span>
+                                <span>Artesanal</span>
+                                <span>Dorada</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Medialuna de grasa"
+                            data-precio="1100"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Medialuna de grasa</strong>
+
+                                <small>
+                                    Clásica argentina
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$1.100</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Medialuna tradicional de grasa
+                                con exterior dorado.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Tradicional</span>
+                                <span>Dorada</span>
+                                <span>Artesanal</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Croissant"
+                            data-precio="2000"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Croissant</strong>
+
+                                <small>
+                                    Masa hojaldrada
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.000</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Croissant artesanal elaborado
+                                con masa hojaldrada y manteca.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Hojaldrado</span>
+                                <span>Manteca</span>
+                                <span>Crocante</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Tostadas"
+                            data-precio="2900"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Tostadas</strong>
+
+                                <small>
+                                    Pan artesanal tostado
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.900</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Pan artesanal tostado para acompañar
+                                con distintos agregados.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Pan artesanal</span>
+                                <span>Tostado</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="500"
+                                        data-extra="Manteca"
+                                    >
+                                    Manteca
+                                    <b>+$500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="600"
+                                        data-extra="Mermelada"
+                                    >
+                                    Mermelada
+                                    <b>+$600</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Queso crema"
+                                    >
+                                    Queso crema
+                                    <b>+$700</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- PASTELERÍA -->
+
+            <section class="categoria" id="pasteleria">
+
+                <div class="categoria-titulo">
+                    <span>03</span>
+                    <h3>Pastelería</h3>
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Cheesecake"
+                            data-precio="4500"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Cheesecake</strong>
+
+                                <small>
+                                    Cremoso y artesanal
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$4.500</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Cheesecake cremoso con base crocante
+                                y terminación artesanal.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Queso crema</span>
+                                <span>Base crocante</span>
+                                <span>Cremoso</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Salsa de chocolate"
+                                    >
+                                    Salsa de chocolate
+                                    <b>+$700</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="900"
+                                        data-extra="Frutos rojos"
+                                    >
+                                    Frutos rojos
+                                    <b>+$900</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Brownie"
+                            data-precio="3800"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Brownie</strong>
+
+                                <small>
+                                    Chocolate intenso
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.800</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Brownie húmedo de chocolate
+                                con interior suave.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Chocolate</span>
+                                <span>Húmedo</span>
+                                <span>Intenso</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="1200"
+                                        data-extra="Helado"
+                                    >
+                                    Helado
+                                    <b>+$1.200</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="800"
+                                        data-extra="Dulce de leche"
+                                    >
+                                    Dulce de leche
+                                    <b>+$800</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Chocotorta"
+                            data-precio="4200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Chocotorta</strong>
+
+                                <small>
+                                    Clásica y cremosa
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$4.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Postre argentino con galletitas,
+                                queso crema y dulce de leche.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Chocolate</span>
+                                <span>Dulce de leche</span>
+                                <span>Cremosa</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Alfajor artesanal"
+                            data-precio="2500"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Alfajor artesanal</strong>
+
+                                <small>
+                                    Producción de la casa
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.500</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Alfajor artesanal relleno y cubierto
+                                con chocolate.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Artesanal</span>
+                                <span>Chocolate</span>
+                                <span>Dulce de leche</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- SALADOS -->
+
+            <section class="categoria" id="salados">
+
+                <div class="categoria-titulo">
+                    <span>04</span>
+                    <h3>Salados</h3>
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Tostado clásico"
+                            data-precio="4800"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Tostado clásico</strong>
+
+                                <small>
+                                    Jamón y queso
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$4.800</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Pan tostado relleno de jamón
+                                y queso fundido.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Jamón</span>
+                                <span>Queso</span>
+                                <span>Tostado</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Tostado especial"
+                            data-precio="5900"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Tostado especial</strong>
+
+                                <small>
+                                    Completo y personalizable
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$5.900</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Tostado completo de la casa
+                                para acompañar con diferentes extras.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Jamón</span>
+                                <span>Queso</span>
+                                <span>Pan tostado</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="1500"
+                                        data-extra="Papas fritas"
+                                    >
+                                    Papas fritas
+                                    <b>+$1.500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="800"
+                                        data-extra="Extra queso"
+                                    >
+                                    Extra queso
+                                    <b>+$800</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="500"
+                                        data-extra="Aderezo"
+                                    >
+                                    Aderezo
+                                    <b>+$500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Huevo"
+                                    >
+                                    Huevo
+                                    <b>+$700</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Sándwich de pollo"
+                            data-precio="6500"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Sándwich de pollo</strong>
+
+                                <small>
+                                    Pollo, queso y vegetales
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$6.500</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Sándwich de pollo acompañado
+                                con queso y vegetales frescos.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Pollo</span>
+                                <span>Queso</span>
+                                <span>Vegetales</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="1500"
+                                        data-extra="Papas fritas"
+                                    >
+                                    Papas fritas
+                                    <b>+$1.500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="900"
+                                        data-extra="Cheddar"
+                                    >
+                                    Cheddar
+                                    <b>+$900</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="500"
+                                        data-extra="Aderezo extra"
+                                    >
+                                    Aderezo extra
+                                    <b>+$500</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Empanada"
+                            data-precio="2200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Empanada</strong>
+
+                                <small>
+                                    Variedades de la casa
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Empanada artesanal elaborada
+                                con rellenos seleccionados.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Artesanal</span>
+                                <span>Masa casera</span>
+                                <span>Relleno abundante</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Quiche de verduras"
+                            data-precio="4900"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Quiche de verduras</strong>
+
+                                <small>
+                                    Suave y artesanal
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$4.900</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Quiche artesanal con verduras
+                                seleccionadas y masa crocante.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Verduras</span>
+                                <span>Masa crocante</span>
+                                <span>Artesanal</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- BEBIDAS -->
+
+            <section class="categoria" id="bebidas">
+
+                <div class="categoria-titulo">
+                    <span>05</span>
+                    <h3>Bebidas</h3>
+                </div>
+
+
+                <div class="lista">
+
+
+                    <article class="item personalizable">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Licuado de frutas"
+                            data-precio="4200"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Licuado de frutas</strong>
+
+                                <small>
+                                    Frutas frescas
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$4.200</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Licuado preparado con frutas frescas
+                                y textura cremosa.
+                            </p>
+
+
+                            <div class="caracteristicas">
+
+                                <span>Frutas frescas</span>
+                                <span>Natural</span>
+                                <span>Cremoso</span>
+
+                            </div>
+
+
+                            <button class="btn-personalizar">
+                                + Personalizar
+                            </button>
+
+
+                            <div class="adicionales">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="500"
+                                        data-extra="Miel"
+                                    >
+                                    Miel
+                                    <b>+$500</b>
+                                </label>
+
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        data-precio="700"
+                                        data-extra="Leche vegetal"
+                                    >
+                                    Leche vegetal
+                                    <b>+$700</b>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Jugo de naranja"
+                            data-precio="3500"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Jugo de naranja</strong>
+
+                                <small>
+                                    Naranja exprimida
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.500</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Jugo natural elaborado
+                                con naranjas frescas.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Natural</span>
+                                <span>Exprimido</span>
+                                <span>Fresco</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Limonada"
+                            data-precio="3600"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Limonada</strong>
+
+                                <small>
+                                    Fresca y natural
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$3.600</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Limonada fresca preparada
+                                con limón natural.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Limón natural</span>
+                                <span>Fresca</span>
+                                <span>Refrescante</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Agua mineral"
+                            data-precio="2000"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Agua mineral</strong>
+
+                                <small>
+                                    Con o sin gas
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.000</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Agua mineral disponible
+                                con o sin gas.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Mineral</span>
+                                <span>Fría</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="item">
+
+                        <button
+                            class="producto-boton"
+                            data-producto="Gaseosa"
+                            data-precio="2800"
+                        >
+
+                            <div class="item-info">
+
+                                <strong>Gaseosa</strong>
+
+                                <small>
+                                    Variedades disponibles
+                                </small>
+
+                            </div>
+
+                            <span class="precio">$2.800</span>
+
+                            <span class="icono-producto">+</span>
+
+                        </button>
+
+
+                        <div class="detalle-producto">
+
+                            <p>
+                                Gaseosa fría en diferentes
+                                variedades.
+                            </p>
+
+                            <div class="caracteristicas">
+
+                                <span>Fría</span>
+                                <span>Variedades</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- FOTOS LATERALES -->
+
+        <aside class="imagenes">
+
+            <div class="imagen-grande">
+
+                <img
+                    src="{{ url_for('static', filename='img/cafe.jpg') }}"
+                    alt="Café Victoria"
+                >
+
+            </div>
+
+
+            <div class="imagenes-pequenas">
+
+                <img
+                    src="{{ url_for('static', filename='img/torta.jpg') }}"
+                    alt="Pastelería Victoria"
+                >
+
+                <img
+                    src="{{ url_for('static', filename='img/sandwich.jpg') }}"
+                    alt="Salado Victoria"
+                >
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<!-- PEDIDO FLOTANTE -->
+
+<div class="pedido-flotante">
+
+    <div class="pedido-total-superior">
+
+        <small>TOTAL DEL PEDIDO</small>
+
+        <strong id="pedido-total">
+            $0
+        </strong>
+
+    </div>
+
+
+    <a
+        href="{{ url_for('carrito') }}"
+        class="pedido-boton"
+    >
+
+        <span class="pedido-circulo">
+            🛒
+        </span>
+
+        <span class="pedido-texto">
+
+            <small>MI PEDIDO</small>
+
+            <strong>
+                Ver pedido
+            </strong>
+
+        </span>
+
+
+        <span
+            class="pedido-contador"
+            id="pedido-contador"
+        >
+            0
+        </span>
+
+    </a>
+
+</div>
+
+
+<footer>
+
+    <strong>VICTORIA</strong>
+
+    <span>
+        Panadería & Café
+    </span>
+
+    <span>
+        Mesa 08
+    </span>
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
